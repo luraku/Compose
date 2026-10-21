@@ -2,12 +2,12 @@
 App Android (Jetpack Compose) pour composer une image à partir de plusieurs photos.
 
 ## Utilisation
-- **+** : choisir une image dans la galerie (une par une).
+- **Ajouter** : choisir une ou plusieurs images dans la galerie.
 - **Glisser** : déplacer · **Pincer** : agrandir/réduire · **Deux doigts** : rotation centrale.
 - Onglet **Ajuster** : taille, rotation centrale, rotation axiale (axe vertical / horizontal), opacité.
 - Onglet **Calques** : sélection, ordre (devant/derrière), miroir, dupliquer, supprimer.
 - Onglet **Page** : format (1:1, 4:3, 3:4, 16:9, 9:16) et fond (transparent, blanc, noir, gris).
-- **✓** : valide et enregistre un PNG (2048 px) dans `Images/Compose`.
+- **Enregistrer** : valide et enregistre un PNG (2048 px) dans `Images/Compose`.
 
 ## Obtenir l'APK
 Le workflow GitHub Actions « Build APK » compile l'application ; l'APK est téléchargeable
