@@ -37,21 +37,25 @@ class ComposerViewModel(app: Application) : AndroidViewModel(app) {
 
     val selected: Layer? get() = layers.firstOrNull { it.id == selectedId }
 
-    fun addImage(uri: Uri) {
+    fun addImages(uris: List<Uri>) {
+        if (uris.isEmpty()) return
         viewModelScope.launch {
             busy = true
-            val bmp = withContext(Dispatchers.IO) {
-                runCatching { loadBitmap(uri) }.getOrNull()
+            var failed = 0
+            for (uri in uris) {
+                val bmp = withContext(Dispatchers.IO) { runCatching { loadBitmap(uri) }.getOrNull() }
+                if (bmp == null) {
+                    failed++
+                    continue
+                }
+                val fit = min(pageW * 0.6f / bmp.width, pageH * 0.6f / bmp.height)
+                val shift = (layers.size % 5) * 24f
+                val layer = Layer(nextId++, bmp, pageW / 2f + shift, pageH / 2f + shift, scale = fit)
+                layers.add(layer)
+                selectedId = layer.id
             }
             busy = false
-            if (bmp == null) {
-                message = "Impossible de charger cette image"
-                return@launch
-            }
-            val fit = min(pageW * 0.6f / bmp.width, pageH * 0.6f / bmp.height)
-            val layer = Layer(nextId++, bmp, pageW / 2f, pageH / 2f, scale = fit)
-            layers.add(layer)
-            selectedId = layer.id
+            if (failed > 0) message = "$failed image(s) n'ont pas pu être chargées"
         }
     }
 
