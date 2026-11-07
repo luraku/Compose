@@ -1,5 +1,6 @@
 # Compose
 
+[![Licence](https://img.shields.io/badge/Licence-Apache%202.0-blue)](LICENSE)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-pocketdock-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/pocketdock)
 [![Proudly made with Claude](https://img.shields.io/badge/Proudly%20made%20with-Claude-D97757?logo=anthropic&logoColor=white)](https://claude.ai/code)
 
@@ -62,6 +63,10 @@ L'APK est généré dans `app/build/outputs/apk/release/`. Il est signé avec la
 ## Soutenir le projet
 
 Si l'application vous est utile, vous pouvez soutenir son développement sur [Buy Me a Coffee](https://buymeacoffee.com/pocketdock) (pocketdock). Merci !
+
+## Licence
+
+Distribué sous licence [Apache 2.0](LICENSE).
 
 ---
 
