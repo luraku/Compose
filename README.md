@@ -1,5 +1,8 @@
 # Compose
 
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-pocketdock-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/pocketdock)
+[![Proudly made with Claude](https://img.shields.io/badge/Proudly%20made%20with-Claude-D97757?logo=anthropic&logoColor=white)](https://claude.ai/code)
+
 Application Android pour **composer une image à partir de plusieurs photos** : on importe des images depuis la galerie, on les place, redimensionne, fait pivoter et superpose au doigt, puis on exporte le résultat en PNG.
 
 Écrite en Kotlin avec Jetpack Compose, sans serveur ni compte : tout se passe sur l'appareil.
@@ -55,3 +58,11 @@ L'APK est généré dans `app/build/outputs/apk/release/`. Il est signé avec la
 - Un geste commencé hors de toute image agit sur l'image déjà sélectionnée.
 - La sélection au doigt ignore l'inclinaison 3D : elle est approximative pour une image très inclinée.
 - Les images importées sont réduites à 2048 px maximum sur leur grand côté.
+
+## Soutenir le projet
+
+Si l'application vous est utile, vous pouvez soutenir son développement sur [Buy Me a Coffee](https://buymeacoffee.com/pocketdock) (pocketdock). Merci !
+
+---
+
+Proudly made with [Claude](https://claude.ai/code).
